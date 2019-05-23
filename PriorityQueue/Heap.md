@@ -4,7 +4,7 @@
 4. 新建对象时，可以指定一个初始容量，其容量会自动增加。
 
 
-Note:
+<h3>Note:</h3>
 1. Queue 是 Array 实现，但是数组大小可以动态增加，容量无限。
 2. Queue 的实现，不是同步的，不是线程安全的。如果多个线程中的任意线程从结构上修改了列表，则这个线程不应同时访问 PriorityQueue 实例。 保证线程安全
   可以用 PriorityBlockingQueue class
@@ -27,3 +27,8 @@ Note:
  
  
 PriorityQueue 不允许空值，而且不支持 non-comparable 的对象，比如用户自定义的类。PQ 要求使用 Java Comparable & Comparator 接口给对象排序，并且在排序时会按照优先级处理其中的元素。
+
+<h3>PQ 的实现原理</h3>
+通过heap实现，完全二叉树（complete binary tree)实现的小顶堆（任意一个非叶子节点的权值，都不大于其左右子节点的权值），可以通过数组来作为PQ的底层实现。
+Priority Queue represented as a balanced binary heap:
+- the two children of queue[n] are queue[2*n + 1] and queue[2*(n+1)].
