@@ -36,3 +36,50 @@ PriorityQueue 不允许空值，而且不支持 non-comparable 的对象，比�
 Priority Queue represented as a balanced binary heap:
 
   the two children of queue[n] are queue[2*n + 1] and queue[2*(n+1)].
+  ```java
+  transient Object[] queue; // non-private to simplify nested class access
+  //The numner of elements in the priority queue
+  private int size = 0;
+  ```
+父节点的编号之间有如下关系：
+* leftNode = parentNode * 2 + 1
+* rightNode = parentNode * 2 + 2
+* parentNode = (nodeNo - 1)/2
+
+### ``` add(E e) & offer(E e)``` 操作时间复杂度为 O(log(n))
+```java
+public boolean offer(E e){
+  if (e == null) 
+      throw new NullPointerException();
+  modCount++;
+  int i = size;
+  if (i >= queue.length) 
+      grow(i + 1);
+  size = i + 1;
+  if (i == 0)
+      queue[0] = e;
+  else 
+      siftUp(i, e);
+  return true;
+  }
+```
+### poll() Time complexity O(log(n))
+```java
+public E poll(){
+    if (size == 0)
+        return null;
+    int s = --size;
+    modCount++;
+    E result = (E) queue[0];
+    E x =(E)queue[s];
+    queue[s] = null;
+    if (s != 0)
+        siftDown(0,x);
+    return result;
+```
+### peak() Time complexity O(1)
+```java
+public E peek(){
+    return (size == 0) ? null:(E)queue[0];
+}
+```
