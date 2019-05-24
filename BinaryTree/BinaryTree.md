@@ -14,13 +14,14 @@
 最后可得 n0 = n2 + 1
 
 
+```java
 /**
  *  1. 求二叉树中的节点个数
  * 递归解法：
  * （1）如果二叉树为空，节点个数为0
  * （2）如果二叉树不为空，二叉树节点个数 = 左子数个数 + 右子数 + 1
  */
-```java
+
     int GetNodeNum(BinaryTreeNode pRoot){
         if (pRoot == null)
             return 0;
