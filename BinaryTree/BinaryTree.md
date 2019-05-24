@@ -14,6 +14,7 @@
 最后可得 n0 = n2 + 1
 
 
+Get node Number in a Binary Tree
 ```java
 /**
  *  1. 求二叉树中的节点个数
@@ -27,4 +28,24 @@
             return 0;
         return GetNodeNum(pRoot ->m_pLeft) + GetNodeNum(pRoot->m_pRight) + 1;
     }
+```
+
+
+Get depth in a Binary Tree:
+```java
+/**
+     * 2. 求二叉树的深度
+     * 递归解法：
+     * （1）if (tree == null) depth = 0
+     * （2）depth = max (left_depth, right_depth) + 1
+     */
+
+     int GetDepth(BinaryTreeNode root){
+         if (root == null){
+             return 0;
+         }
+         int depthLeft = GetDepth(root->m_left);
+         int depthRigth = GetDepth(root->_right);
+         return depthleft > depthright ? (depthLeft + 1) :(depthright + 1);
+     }
 ```
