@@ -1,3 +1,4 @@
+
 # Arrays and Strings
 
 ### 5/17 
@@ -5,7 +6,7 @@
 * Medium: Valid-parentheses
 
 ### 5/18
-* Easy : Reverse Vowels of a String
+* -[x] Easy : Reverse Vowels of a String
 * Easy: Isomorphic Strings
 * Medium: Longest substring without repeating characters
 * Hard: Median of Two sorted Arrays
@@ -49,7 +50,7 @@
 * Easy : Last Stone Weight (PQ)
 
 ### 5/23
-* Easy : Kth Largest Element in a Stream (PQ)
+* -[x] Easy : Kth Largest Element in a Stream (PQ)
 * Medium: Kth Largest Element in an Array
 
 # Binary Trees and Linked Lists
