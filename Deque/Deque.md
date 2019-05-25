@@ -13,3 +13,44 @@
 * 此接口扩展了Queue接口。在双端队列作用时，讲得到 FIFO。将元素添加到双端队列的末尾， 从双端队列的开始移除元素。
 * 也可用 LIFO 堆栈。**应优先使用此接口尾部是遗留Stack类**。 
 * 此接口提供了两种移除内部元素的方法 **removeFirstOccurrence & removeLastOccurrence**.
+
+```java
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+import jdk.internal.cmm.SystemResourcePressureImpl;
+
+public class Demo{
+    public static void main(String[] args){
+        Deque<Integer> dq = new ArrayDeque<>();
+        for (int i = 0; i < 5; i++){
+            dq.offer(i);
+        }
+        System.out.println(dq.peek());
+        System.out.println("******** collection traverse******");
+        //collection traverse will not remove elemenet
+        print(dq);
+
+        //queue traverse, element will remove one by one
+        while (dq.peek() != null){
+            System.out.println(dq.poll());
+        }
+
+        System.out.println("******* into stack ******");
+        
+        dq.push(10);
+        dq.push(23);
+        dq.push(78);
+        print(dq);
+
+        System.out.println("********* out of stack *****");
+        System.out.println(dq.pop());
+    }
+
+    private static void print(Deque<Integer> q){
+        for(Integer i : q){
+            System.out.println(i);
+        }
+    }
+}
+```
