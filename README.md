@@ -1,3 +1,9 @@
+Week 1  | Week2
+------------ | -------------  
+Arrays & String | Binary Trees & LinkedList
+Easy: 27 | Easy: 
+Medium: 5 | Medium: 
+
 
 # Arrays and Strings
 
