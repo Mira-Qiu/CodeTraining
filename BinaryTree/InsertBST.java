@@ -30,7 +30,7 @@
                      node = node.left;
                  } else {
                      node.left = new TreeNode(val); // add a new node to the tree.
-                     break; //end and out to the loop.
+                     break; //end and get out of the loop.
                  }
              } else {
                  if (node.right != null){
@@ -39,7 +39,7 @@
                      node.right = new TreeNode(val);
                  }
              }
-         }
+         }// end while loop
          return root;
      }
  }
