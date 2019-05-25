@@ -1,4 +1,4 @@
-一个线性 colection, 支持在两端插入和移除. deque "double ended queue"。
+一个线性 collection, 支持在两端插入和移除. Deque "double ended queue"。
 大多数 Deque 实现对于他们能包含的元素数没有固定限制，但此接口既能支持有容量限制的双端队列，也支持没有固定大小限制的双端队列。
 
 此接口定义在双端队列两端访问元素的方法。提供插入，移除和检查元素的方法。每种方法都存在两种形式： 一种形式在操作失败时抛出异常，另一种返回一个特殊值
@@ -28,7 +28,7 @@ public class Demo{
         }
         System.out.println(dq.peek());
         System.out.println("******** collection traverse******");
-        //collection traverse will not remove elemenet
+        // collection traverse will not remove elemenet
         print(dq);
 
         //queue traverse, element will remove one by one
