@@ -5,6 +5,7 @@
   *     1.node 大于等于L，小于等于 R，就把根加入结果中
   *     2. node 大于 L，就把node 放入公式中走一遍，
   *     3. node 小于R， 把node 放入公式中。
+  *     【 如果 root.val 落在范围之外，例如，node.val < L，只有右侧节点，可以在范围之内。】
   */
 
   // Method 1: recursive
