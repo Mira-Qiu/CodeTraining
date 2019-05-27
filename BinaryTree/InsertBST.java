@@ -23,23 +23,24 @@
  class Solution {
      public TreeNode insertIntoBST(TreeNode root, int val){
          if (root == null) return new TreeNode(val);
-         TreeNode node = root;
-         while (true){
-             if (node.val > root){
+        TreeNode node = root;
+        while (true){    //需要loop，让node一直走下去。
+            if (node.val > val){
                  if (node.left != null){
                      node = node.left;
                  } else {
                      node.left = new TreeNode(val); // add a new node to the tree.
-                     break; //end and get out of the loop.
+                     break;
                  }
              } else {
                  if (node.right != null){
                      node = node.right;
                  } else {
                      node.right = new TreeNode(val);
+                     break;
                  }
              }
-         }// end while loop
+        }
          return root;
      }
  }
