@@ -26,11 +26,12 @@ class Solution{
 
 class Solution {
     public TreeNode bstToGst(TreeNode root){
-        Deque<TreeNode> stack = new ArrayDeque<>();
+       // Deque<TreeNode> stack = new ArrayDeque<>(); 与下相同结果
+        Deque<TreeNode> stack = new LinkedList<>();
         int sum = 0;
-        TreeNode node = root;
-        while (!stack.isEmpty() || node != null){
-            while (node.right != null){
+        TreeNode node = root; //要新建一个节点，因为结果要返回root
+        while (!stack.isEmpty() || node != null){ // 这里要假如node 不为空的条件，否则 不会进入栈中，因为栈一直为空
+            while (node != null){  //第一个条件，如果本节点有值即可，右节点可以为空，因为null值也要进入序列中（占位); 并且，node 会走到右子树去检查是否有值
                 stack.push(node);
                 node = node.right;
             }
