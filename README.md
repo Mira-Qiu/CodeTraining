@@ -64,3 +64,16 @@ Medium: 5 | Medium:
 * Easy : Peak index in a mountain array
 * Easy : Range Sum of BST
 * Easy: Search in a Binary Search Tree
+### 5/25
+* Easy : N-ary Tree Preorder Traversal
+* Medium: Insert into a Binary Search Tree
+* Medium : Binary Search Tree to Greater sum tree
+* Medium : Binary Tree Preorder Traversal
+
+### 5/26
+* Easy : Merge Two Sorted Lists
+* Easy : Balanced Binary Tree
+* Easy : Palindrome Linked List
+* Easy : Maximum Depth of N-ary Tree
+* Medium: Remove Nth Node From End of List
+* Medium : kth smallest element in a BST
