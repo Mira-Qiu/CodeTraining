@@ -36,11 +36,12 @@
 
   class solution{
       public int rangeSumBST(TreeNode root, int L, int R){
-          Stack<TreeNode> stack = new Stack<>();
-          int ans = 0;
-          stack.push(root);
-          while (!stack.isEmpty()){
-              if (node != null){
+        Deque<TreeNode> stack = new LinkedList<>();
+        stack.push(root);
+        int ans = 0;
+        while (!stack.isEmpty()){
+            TreeNode node = stack.pop();
+            if (node != null){
                 if (node.val >= L && node.val <= R){
                     ans += node.val;
                 }
@@ -50,8 +51,8 @@
                 if (node.val < R){
                     stack.push(node.right);
                 }
-              }          
             }
+        }
         return ans;
       }
   }
