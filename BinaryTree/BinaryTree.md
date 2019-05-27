@@ -23,10 +23,10 @@ Get node Number in a Binary Tree
  * （2）如果二叉树不为空，二叉树节点个数 = 左子数个数 + 右子数 + 1
  */
 
-    int GetNodeNum(BinaryTreeNode pRoot){
-        if (pRoot == null)
+    int GetNodeNum(BinaryTreeNode root){
+        if (root == null)
             return 0;
-        return GetNodeNum(pRoot ->m_pLeft) + GetNodeNum(pRoot->m_pRight) + 1;
+        return GetNodeNum(root.left) + GetNodeNum(root.right) + 1;
     }
 ```
 
@@ -36,7 +36,7 @@ Get depth in a Binary Tree:
 /**
      * 2. 求二叉树的深度
      * 递归解法：
-     * （1）if (tree == null) depth = 0
+     * （1）if (root == null) depth = 0
      * （2）depth = max (left_depth, right_depth) + 1
      */
 
@@ -44,8 +44,8 @@ Get depth in a Binary Tree:
          if (root == null){
              return 0;
          }
-         int depthLeft = GetDepth(root->m_left);
-         int depthRigth = GetDepth(root->_right);
-         return depthleft > depthright ? (depthLeft + 1) :(depthright + 1);
+         int depthLeft = GetDepth(root.left);
+         int depthRigth = GetDepth(root.right);
+         return Math.max(depthLeft, depthRight) + 1;
      }
 ```
