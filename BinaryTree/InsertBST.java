@@ -26,7 +26,7 @@
         TreeNode node = root;
         while (true){    //需要loop，让node一直走下去。
             if (node.val > val){
-                 if (node.left != null){
+                 if (node.left != null){ //先看位置是否为空，如果空，加入node，如果不空，挪动node位置，否则会加入 null进入数组
                      node = node.left;
                  } else {
                      node.left = new TreeNode(val); // add a new node to the tree.
