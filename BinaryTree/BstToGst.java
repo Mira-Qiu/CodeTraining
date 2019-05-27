@@ -32,13 +32,13 @@ class Solution {
         TreeNode node = root; //要新建一个节点，因为结果要返回root
         while (!stack.isEmpty() || node != null){ // 这里要假如node 不为空的条件，否则 不会进入栈中，因为栈一直为空
             while (node != null){  //第一个条件，如果本节点有值即可，右节点可以为空，因为null值也要进入序列中（占位); 并且，node 会走到右子树去检查是否有值
-                stack.push(node);
+                stack.push(node);  // 压入栈的第一个节点为，父节点，压入栈的最后一个节点为最右的子节点
                 node = node.right;
             }
-            node = stack.pop();
+            node = stack.pop(); //pop出来的第一个值为最后的右节点，pop出的最后一个值为父节点。
             node.val += sum;
             sum = node.val;
-            node = node.left;
+            node = node.left; //去左子树
         }
         return root;
     }
