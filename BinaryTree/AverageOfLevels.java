@@ -47,7 +47,7 @@ import java.util.List;
          while (!queue.isEmpty()){
              long sum = 0, count = 0;
              Deque<TreeNode> tmpQueue = new LinkedList<>();
-             while (!queue.isEmpty){
+             while (!queue.isEmpty()){
                  TreeNode n = queue.remove();
                  sum += n.val;
                  count++;
