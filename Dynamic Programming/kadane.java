@@ -21,6 +21,18 @@ class Solution {
 }
 
 /**
+* input             [-1, 2, -1, -1, 3]
+* stdout max_ending_here : 2, 1, 0, 3
+* stdout      max_so_far : 2, 2, 2, 3
+* 
+* output : 3
+* expected : 3
+* 
+*/
+
+
+
+/**
  *  1. 先将问题进行拆分，指定数组中某一个元素A[i]作为最大子数了的末尾元素时，能找到的最大子数了的求和值时多少
  * 2. 发现： A[i] 最为末尾时能找到的最大子数  subarrayi, 必然为 A[i] 本身，或者A[i-1] 作为末尾元素时能找到的最大子数列 subarray[i - 1] 并接上A[i]
  *  3. 所以遍历数组每一个值，能找到的最大子数列求和值 max_ending_here, 就能计算 A[i+1] 作为末尾时，
